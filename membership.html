@@ -1,0 +1,78 @@
+<!--마이페이지 : "내 정보 수정" 파트입니다-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원권</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: Pretendard,sans-serif !important;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+            background-color: rgba(238, 235, 235,0.6);
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            width:50%;
+            height:100%;
+            margin:auto;
+            background-color: white;
+            
+        }
+        .membership-img-container{
+            height:80%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .no-membership-img{
+            font-size: 15px;
+            text-align: center;
+            font-weight: 900;
+            color:gray;
+        }
+        
+        .find-membership-button{
+            width:90%;
+            height:6%;
+            background-color: rgba(39, 39, 239, 0.756);
+            margin:auto;
+            border-radius: 10px;
+            text-align: center;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="membership-img-container">
+            <div class="no-membership-img">
+                <svg width="289" height="230" viewBox="0 0 239 180" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="203" y="62" width="30" height="12" rx="6" fill="#F7F7F7"></rect><path d="M133.218 96L39.0556 96C32.3715 96 26.2211 100.433 24.9504 106.906C23.2221 115.671 29.9571 123.353 38.4711 123.353L40.9871 123.353C43.4524 123.353 45.4602 125.342 45.4602 127.785C45.4602 130.682 43.0966 133.049 40.1484 133.049L10.1081 133.049C5.43173 133.049 1.21286 136.525 1.00954 141.134C0.780802 145.995 4.69469 150 9.54893 150L114.233 150C118.909 150 123.128 146.524 123.331 141.915C123.56 137.054 119.646 133.049 114.792 133.049L107.396 133.049C104.728 133.049 102.542 130.909 102.542 128.239C102.542 125.544 104.753 123.353 107.472 123.353L132.608 123.353C139.292 123.353 145.442 118.92 146.713 112.447C148.492 103.682 141.757 96 133.218 96Z" fill="#F7F7F7"></path><path d="M139.195 14L208.849 14C213.794 14 218.343 17.2836 219.283 22.0784C220.562 28.5709 215.58 34.2612 209.282 34.2612L207.42 34.2612C205.597 34.2612 204.112 35.7351 204.112 37.5448C204.112 39.6903 205.86 41.444 208.041 41.444L230.263 41.444C233.722 41.444 236.843 44.0187 236.993 47.4328C237.162 51.0336 234.267 54 230.676 54L153.239 54C149.78 54 146.659 51.4254 146.508 48.0112C146.339 44.4104 149.234 41.444 152.825 41.444L158.296 41.444C160.27 41.444 161.887 39.8582 161.887 37.8806C161.887 35.8843 160.251 34.2612 158.24 34.2612L139.646 34.2612C134.702 34.2612 130.152 30.9776 129.212 26.1828C127.896 19.6903 132.878 14 139.195 14Z" fill="#F7F7F7"></path><circle cx="93" cy="80" r="54" fill="#F7F7F7"></circle><g filter="url(#filter0_d_6486_35788)"><rect x="61" y="49" width="135" height="78" rx="9" fill="#F3F5FF"></rect></g><path d="M61 58C61 53.0294 65.0294 49 70 49H187C191.971 49 196 53.0294 196 58V64H61V58Z" fill="#B5BBFD"></path><path d="M85.6542 94.7064C87.5386 94.7064 89.0662 93.1788 89.0662 91.2943C89.0662 89.4099 87.5386 87.8823 85.6542 87.8823C83.7698 87.8823 82.2422 89.4099 82.2422 91.2943C82.2422 93.1788 83.7698 94.7064 85.6542 94.7064Z" fill="#E4E9FF"></path><path d="M104.123 94.7064C106.007 94.7064 107.535 93.1788 107.535 91.2943C107.535 89.4099 106.007 87.8823 104.123 87.8823C102.239 87.8823 100.711 89.4099 100.711 91.2943C100.711 93.1788 102.239 94.7064 104.123 94.7064Z" fill="#E4E9FF"></path><path d="M110.516 114.751H79.6385C77.8275 114.751 76.3594 113.283 76.3594 111.472V110.8C76.3594 106.829 79.5785 103.609 83.5499 103.609H106.605C110.576 103.609 113.795 106.829 113.795 110.8V111.472C113.795 113.283 112.327 114.751 110.516 114.751Z" fill="#B5BBFD"></path><path d="M98.8638 86.2319L100.029 84.4455C100.135 84.2826 100.377 84.2934 100.469 84.4648L101.393 86.1976C101.472 86.3466 101.627 86.4398 101.796 86.4398H104.507V86.4087C104.507 81.1792 100.306 76.9785 95.0767 76.9785C89.8472 76.9785 85.6465 81.1792 85.6465 86.4087V86.4387H98.4812C98.6355 86.4387 98.7791 86.3605 98.8638 86.2319Z" fill="#B5BBFD"></path><path d="M101.796 86.4384C101.627 86.4384 101.472 86.3452 101.393 86.1962L100.469 84.4634C100.378 84.2919 100.136 84.2812 100.029 84.4441L98.8638 86.2305C98.7791 86.3602 98.6355 86.4373 98.4812 86.4373H85.6465V91.5521C85.6465 96.7816 89.8472 100.982 95.0767 100.982C100.306 100.982 104.507 96.7816 104.507 91.5521V86.4384H101.796Z" fill="#E4E9FF"></path><path d="M95.078 106.234C93.3452 106.234 91.9414 104.829 91.9414 103.097V99.9604H98.2157V103.097C98.2146 104.829 96.8108 106.234 95.078 106.234Z" fill="#E4E9FF"></path><rect x="126" y="75.2827" width="55.9565" height="6.78261" rx="3.3913" fill="#E4E9FF"></rect><rect x="126" y="91.3911" width="26.2826" height="5.08696" rx="2.54348" fill="#E4E9FF"></rect><rect x="126" y="102.413" width="39" height="5.08696" rx="2.54348" fill="#E4E9FF"></rect><rect x="126" y="111.739" width="39" height="5.08696" rx="2.54348" fill="#E4E9FF"></rect><rect x="204" y="82" width="18" height="12" rx="6" fill="#F7F7F7"></rect><defs><filter id="filter0_d_6486_35788" x="51" y="43" width="155" height="98" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="4"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feColorMatrix type="matrix" values="0 0 0 0 0.827604 0 0 0 0 0.847309 0 0 0 0 0.945833 0 0 0 1 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_6486_35788"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_6486_35788" result="shape"></feBlend></filter></defs></svg>
+                <p>아직 활성화 된 할인쿠폰이 없어요.</p>
+            </div>
+        </div>
+       
+            <div class="find-membership-button">
+                회원권 찾으러 가기
+            
+        </div>
+       
+       
+      
+    </div>
+</body>
+
+</html>
